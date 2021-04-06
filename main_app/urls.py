@@ -15,5 +15,8 @@ urlpatterns = [
     path('restaurants/<int:r_id>/edit/', views.edit_form),
     # update step 2 - accept form submission 
     path('restaurants/<int:r_id>/submit_update_form/', views.submit_update_form),
+
+    path('restaurants/reviews/<int:r_id>',views.reviews)
+    path('restaurants/<int:r_id>/reviews_manual/', views.review_manual)
 ]
 

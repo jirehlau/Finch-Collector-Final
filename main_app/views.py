@@ -59,3 +59,9 @@ def reviews(request, r_id):
   r = Restaurant.objects.get(id=r_id)
   restaurants = r.reviews_set.all()
   print(reviews)
+
+def reviews_manual(request, r_id):
+  Review.objects.create(
+    review= request.post['review'],
+  )
+  return redirect(f'/restaurants/{r_id')
